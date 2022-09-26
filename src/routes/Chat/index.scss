@@ -1,0 +1,85 @@
+@import '../../assets/styles/variable.scss';
+
+.chat-page {
+    // height: 100%;
+    .chat-layout {
+        height: calc(100vh - 170px);
+        .ant-layout-sider {
+            background: white!important;
+            border-right: 1px solid $gray250;
+            padding: 20px 0 0 0;
+            overflow: hidden;
+            .ant-btn-icon-only {
+                width: 32px;
+                height: 32px;
+            }
+        }
+        .ant-layout-header {
+            padding: 10px 15px;
+            border-bottom: 1px solid $gray250;
+        }
+        .ant-layout-content {
+            background-color: #c0e0fd69;
+            height: 100%;
+            overflow: auto;
+            padding: 15px 10px;
+        }
+        .ant-layout-footer {
+            padding: 5px;
+        }
+        .avt-chat {
+            border: 1px solid $gray200;
+        }
+        .user-list {
+            overflow: auto;
+            height: calc(100% - 32px);
+            padding: 20px 10px 0 10px;
+
+            .user-item {
+                padding: 8px 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-bottom: 1px solid $gray200;
+            }
+        }
+        .mess-view {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p { margin-bottom: 0; }
+            .their-mess {
+                // display: inline-block;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                // width: auto;
+                
+                .mess-item {
+                    color: $white;
+                    background-color: #112a4080;
+                    padding: 10px 15px;
+                    margin: 0 0 10px 10px;
+                    border-radius: 8px;
+                    // display: inline-block;
+                }
+            }
+            .your-mess {
+                margin-left: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-end;
+                .mess-item {
+                    background-color: $white;
+                    padding: 10px 15px;
+                    margin: 0 10px 10px 0;
+                    border-radius: 8px;
+                    display: inline-block;
+                }
+            }
+            
+        }
+    }
+}

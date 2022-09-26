@@ -1,0 +1,321 @@
+@import '~antd/dist/antd.css';
+@import './variable.scss';
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+/** LOGIN */
+.row-form {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-self: center;
+  margin: auto;
+
+  &.row-login {
+    height: 100vh;
+  }
+
+  .label-form {
+    color: $black;
+    font-weight: 700;
+    margin: 0 0 10px 10px;
+    padding-top: 10px;
+  }
+}
+.col-form {
+  background-color: $white;
+  padding: 30px 20px;
+  padding-bottom: 25px;
+  margin: 0 25px;
+  border-radius: 3px;
+  position: relative;
+
+  .div-form-title {
+    color: $black87;
+  }
+
+  .div-title {
+    padding: 1.5rem 0;
+
+    .signIn-text {
+      font-size: 22px;
+      font-weight: 600;
+      color: $bluelight550;
+      text-align: center;
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+  }
+
+  .ant-form-item {
+    margin-bottom: 14px;
+
+    &-control-input {
+      min-height: unset;
+
+      // &-content { height: 40px;}
+
+      .ant-input {
+        font-size: 16px;
+        color: $black87;
+        border-color: $gray250;
+        height: 40px;
+       
+        &::placeholder {
+          color: $black06;
+        }
+        &:active,
+        &:focus {
+          border-color: #65aedb;
+        }
+      }
+      .ant-input-sm {
+        font-size: 12px;
+        color: $black87;
+        border-color: $gray250;
+        height: 24px;
+        
+      }
+
+      .ant-input-affix-wrapper {
+        padding: 0;
+        font-size: 16px;
+        height: 42px;
+
+        .ant-input {
+          border: 0;
+          color: $black87;
+          padding: 0 28px 0 11px;
+          border-color: $gray250;
+        }
+        .ant-input-suffix { margin-right: 11px;}
+      }
+    }
+
+    textarea.ant-input {
+      height: auto!important;
+    }
+
+    &.input-download {
+      .ant-input-affix-wrapper { 
+        border-color: $gray250;
+        border-left: 0;
+      }
+      .ant-input-group-addon { 
+        background-color: $gray250;
+      }
+    }
+    &.bottom-0 {
+      margin-bottom: 0px;
+    }
+    
+  }
+  .bottom-left-0 {
+    margin-bottom: 8px;
+    width: 80px;
+    height: 20px !important;
+  }
+
+  .input-download {
+    // border: 1px solid $gray250;
+    border-radius: 4px;
+    align-items: unset!important;
+    overflow: hidden;
+    
+    p {
+      margin-bottom: 0;
+    }
+    .div-document {
+      padding: 10px;
+      background-color: $gray250;
+      display: flex;
+      align-items: center;
+    }
+    // .div-file-name {
+    //   padding: 10px;
+    // }
+    .div-upload {
+      border: 1px solid $gray250;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 10px 10px 10px 0;
+      .ant-upload.ant-upload-select { 
+        float: right;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .ant-upload { display: inline-block;}
+      }
+      .ant-upload-list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .ant-form-item-with-help .ant-form-item-explain {
+    margin: 5px 0 10px 0;
+  }
+
+  .ant-picker { 
+    height: 40px;
+    width: 100%;
+    // border: 1px solid $gray250;
+   
+    .ant-picker-input > input {
+      color: $black87;
+      font-size: 16px;
+      &::placeholder {
+        color: $black06;
+      }
+    }
+    .ant-picker-suffix { color: $black}
+  }
+
+  .picker-small {
+    .ant-picker { 
+      height: 28px;
+     
+      .ant-picker-input {
+        & > input {
+          color: $black87;
+          font-size: 14px;
+          line-height: 28px;
+
+          &::placeholder {
+            color: $black06;
+          }
+        }
+        .anticon svg {
+          width: 14px;
+          height: 14px;
+        }
+      }
+      .ant-picker-suffix { color: $black}
+    }
+  }
+  
+  .ant-select-multiple .ant-select-selection-item {
+    height: 32px;
+    line-height: 32px;
+    border-radius: 14px;
+    background: transparent;
+    padding-inline-end: 6px;
+    padding-inline-start: 10px;
+
+    .anticon svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .float-label-item {
+    margin-top: 5px;
+    .ant-form-item-label {
+      position: absolute;
+      top: -5px;
+      left: 20px;
+      z-index: 1;
+
+      label {
+        background-color: $white;
+        display: inline-block;
+        height: auto;
+      }
+    }
+  }
+
+  .info-icon {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    z-index: 2;
+
+    svg {
+      color: $primary-color;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  
+  .pass-contain {
+    color: $gray700;
+    position: absolute;
+    right: -220px;
+    bottom: 0;
+    border: 1px solid $gray250;
+    border-radius: 2px;
+    padding: 10px;
+
+    ul {
+      li {
+        font-size: 10px;
+        max-width: 120px;
+        &.active {
+          color: $black!important;
+        }
+        svg {
+          margin-right: 5px;
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+  .form-btn {
+    margin-top: 25px;
+  }
+
+  .div-new-user {
+    padding-top: 1.5rem;
+    font-size: 14px;
+    text-decoration: underline;
+    a { 
+      margin-right: 10px;
+      color: $primary-color-dark;
+      &:hover { color: $primary-color}
+    }
+  }
+
+  .item-remove {
+    position: relative;
+    .icon-remove {
+      position: absolute;
+      top: 21px;
+      right: -16px;
+    }
+  }
+}
+.col-login { 
+  width: 400px;
+  box-shadow: 0px 2px 7px 0px rgba(204, 204, 204, 0.6);
+}
+.col-form-modal {
+  padding: 0;
+  margin: 0;
+}
+.input-search {
+  .ant-btn-icon-only {
+    width: 32px;
+    height: 32px;
+  }
+}
+  

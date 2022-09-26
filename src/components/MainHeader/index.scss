@@ -1,0 +1,105 @@
+@import '../../assets/styles/variable.scss';
+// Slidable layout component
+.component-mainheader {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .div-account {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .account-icon {
+            .ant-avatar {
+                background-color: $primary-color-dark;
+            }
+        }
+        .account-name {
+            margin-left: 10px;
+        }
+    }
+    .div-search {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        .ant-input {
+            border: 1px solid transparent;
+            border-bottom: 1px solid $gray250;
+            border-radius: 0;
+            padding-left: 0;
+            margin-left: 10px;
+            font-size: 16px;
+            width: 200px;
+            &:focus, 
+            &-focused {
+                border-color: transparent;
+                border-bottom: 1px solid $primary-color;
+                box-shadow: unset;
+                border-right-width: 0;
+            }
+            &:hover {
+                border-color: transparent;
+                border-bottom: 1px solid $primary-color;
+                border-right-width: 0;
+            }
+        }
+    }
+    .div-trans {
+        flex: 1;
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+        .trans-all {
+            margin: 0 3px;
+            &.ant-avatar {
+                font-size: 16px!important;
+                background-color: $primary-color-dark;
+            }
+        }
+        .trans-scroll {
+            width: 208px;
+            overflow-x: auto;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .trans-item {
+                margin: 0 3px;
+                cursor: pointer;
+                &.ant-avatar {
+                    font-size: 14px!important;
+                    color: $primary-color-dark;
+                    background-color: $white;
+                    border: 1px solid $primary-color-dark;
+                }
+            }
+        }
+        
+        .trans-left,
+        .trans-right {
+            width: 35px;
+            height: 35px;
+            vertical-align: top;
+            color: $primary-color-dark;
+            cursor: pointer;
+
+            &:hover,
+            &:focus,
+            &:active { color: $primary-color;}
+        }
+        .trans-new {
+            padding: 4px 5px;
+            margin: 0 3px;
+            border-radius: 4px;
+            background-color: $primary-color-dark;
+        }
+    }
+    .avt-img {
+        border: 1px solid $gray200;
+    }
+}

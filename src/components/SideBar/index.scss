@@ -1,0 +1,46 @@
+@import '../../assets/styles/variable.scss';
+// Slidable layout component
+.ant-menu {
+    color: $gray250!important;
+    background-color: $blue-dark!important;
+    padding-top: 20px!important;
+
+    &-item-selected,
+    &-item-active {
+        color: $white!important;
+    }
+    &:not(.ant-menu-horizontal) .ant-menu-item-selected {
+        background-color: #0f2030!important;
+        .ant-menu-item-selected a, 
+        .ant-menu-item-selected a:hover {
+            color: #fff!important;
+        }
+    }
+    .ant-menu-inline .ant-menu-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .ant-menu-submenu-selected {
+        color: $white!important;
+    }
+    .ant-menu-selected {
+        color: $white!important;
+    }
+    .ant-menu-light .ant-menu-item:hover {
+        color: #fff;
+    }
+    .ant-menu-item {
+        a {
+            color: $gray250!important;
+        }
+        &:active {
+            background-color: #0f2030!important;
+            a {
+                color: $gray250!important;
+            }
+        }
+    }
+    .ant-menu-item
+    &.ant-menu-inline-collapsed > .ant-menu-item .ant-menu-item-icon {
+        vertical-align: middle!important;
+    }
+}
